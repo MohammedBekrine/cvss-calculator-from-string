@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calcolatore CVSS</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Calcolatore CVSS</h1>
+      <p>Inserisci una vector string CVSS v3.1 o v4.0 e calcola il Base Score.</p>
+    </header>
+
+    <main>
+      <form id="calc-form">
+        <label for="vector">Vector</label>
+        <input id="vector" name="vector" type="text" placeholder="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" autocomplete="off" />
+
+        <div class="actions">
+          <button type="submit" id="submit-btn">Calcola</button>
+          <button type="button" class="ghost" id="ex-v31">Esempio v3.1</button>
+          <button type="button" class="ghost" id="ex-v40">Esempio v4.0</button>
+        </div>
+      </form>
+
+      <section id="result" class="hidden"></section>
+      <section id="error" class="error hidden"></section>
+    </main>
+
+    <footer>
+      <small>
+        API: <code>GET/POST /calculate</code>. Per CVSS 4.0 è necessario il pacchetto <code>cvss</code>.
+      </small>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
+

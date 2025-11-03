@@ -1,0 +1,3 @@
+Flask>=2.2
+# Optional, only needed if you want to compute CVSS v4.0 vectors
+cvss>=3.2
